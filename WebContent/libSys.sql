@@ -28,7 +28,7 @@ insert `reader` values(
 
 DROP TABLE IF EXISTS `book`;
 CREATE TABLE `book` (
-	`book_id` INT PRIMARY KEY,
+	`book_id` INT PRIMARY KEY auto_increment,
 	`book_name` VARCHAR(50) NOT NULL,
 	`book_kind` VARCHAR(10) NOT NULL,
 	`author` VARCHAR(50) NOT NULL,
@@ -80,6 +80,7 @@ CREATE TABLE `borrow` (
 	`back_time` DATE NOT NULL,
 	`is_backed` Boolean NOT Null
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 insert `borrow` values(
 	1, '15090128', '2017-11-02', '2017-12-02', 0
 );
@@ -108,9 +109,11 @@ CREATE TABLE `borrow_history` (
 	`fine` FLOAT
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+delete from borrow;
+
 DROP VIEW IF EXISTS `reader_view`;
 CREATE VIEW `reader_view`(`reader_id`, `reader_name`, `reader_type`, `borrow_cnt`) AS 
 SELECT reader.reader_id, reader.reader_name, `reader_type`, COUNT(borrow_history.book_id)
-FROM `reader`, `borrow_history` WHERE reader.reader_id=borrow_history.reader_id;
+FROM `reader`, `borrow_history` WHERE reader.reader_id=borrow_history.reader_id;	
 
 

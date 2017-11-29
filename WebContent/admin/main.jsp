@@ -11,6 +11,7 @@
 		<tr><td><a href="./readerMangement.jsp">读者管理</a></td></tr>
 		<tr><td><a href="./bookMangement.jsp">图书管理</a></td></tr>
 		<tr><td><a href="./borrow.jsp">图书借阅</a></td></tr>
+		<tr><td><a href="./return.jsp">图书归还</a></td></tr>
 	</table>
 </body>
 </html>

@@ -20,4 +20,10 @@ public class CommonUtil {
 			return 6;
 		return 0;
 	}
+	
+	public static String getBookState(boolean state) {
+		if (state)
+			return "借出";
+		return "可借";
+	}
 }

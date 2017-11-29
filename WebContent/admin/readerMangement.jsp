@@ -50,6 +50,9 @@
 		<tr><td>
 			<a href="./addReader.jsp">添加读者</a>
 		</td></tr>
+		<tr><td>
+			<a href="./main.jsp">返回</a>
+		</td></tr>
 	</table>
 	</body>
 	</html>
